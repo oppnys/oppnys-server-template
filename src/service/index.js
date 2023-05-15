@@ -5,7 +5,7 @@ import connection from '../app/database.js';
  * @param message
  * @returns {Promise<*>}
  */
-export const createHello = async (message) => {
+export const create = async (message) => {
     const statement  = `INSERT INTO file (message)  VALUES (?);`;
     const [ result ] = await connection.execute(statement, [message]);
     return result;
